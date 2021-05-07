@@ -47,5 +47,29 @@ namespace Bakery.Tests
       s.Add(new Pastry());
       Assert.AreEqual(5, s.Subtotal);
     }
+    [TestMethod]
+    public void SeshAddBread3Times_FindsSubtotal_10not15()
+    {
+      Sesh s = new();
+      s.Add(new Bread());
+      s.Add(new Bread());
+      s.Add(new Bread());
+      Assert.AreEqual(10, s.Subtotal);
+    }
+    [TestMethod]
+    public void SeshAdd3pastry6bread_FindsSubtotal_25not36()
+    {
+      Sesh s = new();
+      s.Add(new Pastry());
+      s.Add(new Pastry());
+      s.Add(new Pastry());
+      s.Add(new Bread());
+      s.Add(new Bread());
+      s.Add(new Bread());
+      s.Add(new Bread());
+      s.Add(new Bread());
+      s.Add(new Bread());
+      Assert.AreEqual(25, s.Subtotal);
+    }
   }
 }
