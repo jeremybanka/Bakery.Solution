@@ -4,6 +4,11 @@ namespace Bakery.Models
 {
   public class Sesh
   {
+    public List<BakedGood> Order { get; }
+    public Sesh()
+    {
+      Order = new() { };
+    }
     public static bool Method()
     {
       return true;
