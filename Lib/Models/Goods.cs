@@ -1,30 +1,29 @@
+using System;
 using System.Collections.Generic;
 
 namespace Bakery.Models
 {
+  public class Discount
+  {
+    public int Tale { get; set; }
+    public int Savings { get; set; }
+    public Discount(int tale, int savings)
+    {
+      Tale = tale;
+      Savings = savings;
+    }
+  }
   abstract public class BakedGood
   {
     public int Price { get; set; }
-    public Dictionary<int, int> Discounts { get; }
-  }
-  public class Bread : BakedGood
-  {
-    public Bread()
-    {
-      Price = 5;
-      Discounts.Add(3, 10);
-    }
-    public static bool Method()
-    {
-      return true;
-    }
+    public Discount Discount { get; set; }
   }
   public class Pastry : BakedGood
   {
     public Pastry()
     {
       Price = 2;
-      Discounts.Add(3, 5);
+      Discount = new(3, 1);
     }
     public static bool Method()
     {
