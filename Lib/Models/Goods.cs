@@ -30,6 +30,18 @@ namespace Bakery.Models
       return true;
     }
   }
+  public class Bread : BakedGood
+  {
+    public Bread()
+    {
+      Price = 5;
+      Discount = new(3, 5);
+    }
+    public static bool Method()
+    {
+      return true;
+    }
+  }
 }
 
 // letter
