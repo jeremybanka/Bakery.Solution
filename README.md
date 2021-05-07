@@ -1,4 +1,4 @@
-### TEMPLATE.Solution
+### Bakery.Solution
 
 _By Jeremy Banka_
 
@@ -14,7 +14,7 @@ _By Jeremy Banka_
 
 ## Setup/Installation Requirements
 
-- Get the source code: `$ git clone https://github.com/jeremybanka/TEMPLATE.Solution`
+- Get the source code: `$ git clone https://github.com/jeremybanka/Bakery.Solution`
 - Get needed dependencies: `$ dotnet restore` in `Lib/`, `Exe/`, and `Tests/`
 - Compile the Library as you save changes: `$ dotnet watch build` in `Lib/`
 - Also, run the Library tests as you save changes: `$ dotnet watch test` in `Tests/`

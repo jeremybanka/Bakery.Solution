@@ -1,7 +1,7 @@
 using System;
-using Library.Models;
+using Bakery.Models;
 
-namespace TEMPLATE.Executable
+namespace Bakery.Executable
 {
   public class Program
   {

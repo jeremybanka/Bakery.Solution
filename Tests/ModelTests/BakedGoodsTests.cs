@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Library.Models;
+using Bakery.Models;
 
-namespace TEMPLATE.Tests
+namespace Bakery.Tests
 {
   [TestClass]
   public class WordTests
@@ -9,7 +9,7 @@ namespace TEMPLATE.Tests
     [TestMethod]
     public void SampleMethod_Does_Thing()
     {
-      bool output = SAMPLE.Method();
+      bool output = Bread.Method();
       Assert.AreEqual(output, true);
     }
   }

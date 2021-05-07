@@ -1,6 +1,6 @@
-namespace Library.Models
+namespace Bakery.Models
 {
-  public class SAMPLE
+  public class Bread
   {
     public static bool Method()
     {
