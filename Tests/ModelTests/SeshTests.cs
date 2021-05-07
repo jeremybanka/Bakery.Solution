@@ -17,9 +17,35 @@ namespace Bakery.Tests
     public void NewSesh_Has_EmptyOrder()
     {
       Sesh s = new();
-      List<BakedGood> l = new();
-      Assert.AreEqual(s.Order.GetType(), l.GetType());
-      Assert.AreEqual(s.Order.Count, l.Count);
+      List<BakedGood> l = new() { };
+      Assert.AreEqual(l.GetType(), s.Order.GetType());
+      Assert.AreEqual(l.Count, s.Order.Count);
+    }
+    [TestMethod]
+    public void SeshAddPastry_AddsPastry_ToOrder()
+    {
+      Sesh s = new();
+      Pastry p = new();
+      s.Add(p);
+      Assert.AreEqual(1, s.Order.Count);
+      Assert.AreEqual(typeof(Pastry), s.Order[0].GetType());
+    }
+    [TestMethod]
+    public void SeshAddPastry_FindsSubtotal_2()
+    {
+      Sesh s = new();
+      Pastry p = new();
+      s.Add(p);
+      Assert.AreEqual(s.Subtotal, 2);
+    }
+    [TestMethod]
+    public void SeshAddPastry3Times_FindsSubtotal_5not6()
+    {
+      Sesh s = new();
+      s.Add(new Pastry());
+      s.Add(new Pastry());
+      s.Add(new Pastry());
+      Assert.AreEqual(5, s.Subtotal);
     }
   }
 }
